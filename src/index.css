@@ -10,3 +10,7 @@
   text-decoration: none;
   font-family: "vazir",sans-serif;
 }
+body{
+   background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,98,121,1) 17%, rgba(56,188,31,1) 100%); 
+}
