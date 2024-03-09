@@ -1,38 +1,41 @@
-.apptitle{
-    text-align: center;
-    margin: 20px 0px;
-    color: #fff;
+.apptitle {
+  text-align: center;
+  margin: 20px 0px;
+  color: #fff;
 }
-.app-container{
-    margin: 0 auto;
-    max-width: 900px;
-   
+.app-container {
+  margin: 0 auto;
+  max-width: 900px;
 }
-form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
-    
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
 }
-form input{
-    padding: 10px;
-    width: 70%;
-    border-radius: 4px;
-    font-size: 18px;
+form input {
+  padding: 10px;
+  width: 70%;
+  border-radius: 4px;
+  font-size: 18px;
 }
-.addbtn{
-    all: unset;
-    padding: 11px;
-    width: 100px;
-    background-color: #096279;
-    text-align: center;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #fff;
-    margin-left: 5px;
-    transition: all 0.5;
+.addbtn {
+  all: unset;
+  padding: 11px;
+  width: 100px;
+  background-color: #096279;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  margin-left: 5px;
+  transition: all 0.5;
 }
-.addbtn:hover{
-    background-color: #129975;
+.addbtn:hover {
+  background-color: #129975;
+}
+.filter-todo {
+  padding: 11px;
+  margin-left: 5px;
+  border-radius: 10px;
 }

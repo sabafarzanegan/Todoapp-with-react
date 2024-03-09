@@ -1,11 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import Todos from "./components/todos/Todos";
 import TodosContext from "./components/Contextdata/ContextData";
 
 function App() {
+  const todofromlocalstorage = JSON.parse(localStorage.getItem("todo") || []);
   const [inputvalue, setInputvalue] = useState("");
-  const [AllTodos, setAllTodos] = useState([]);
+  const [AllTodos, setAllTodos] = useState(todofromlocalstorage);
+  const [status, setStatus] = useState("all");
+  useEffect(() => {
+    localStorage.setItem("todo", JSON.stringify(AllTodos));
+  }, [AllTodos]);
+
   const inputhandler = (e) => {
     setInputvalue(e.target.value);
   };
@@ -14,9 +20,13 @@ function App() {
     let NewTodo = {
       id: AllTodos.length + 1,
       title: inputvalue,
+      completed: false,
     };
     setAllTodos((prevstate) => [...prevstate, NewTodo]);
     setInputvalue("");
+  };
+  const statusehandler = (e) => {
+    setStatus(e.target.value);
   };
   return (
     <>
@@ -26,6 +36,8 @@ function App() {
           setAllTodos,
           inputvalue,
           setInputvalue,
+          status,
+          setStatus,
         }}
       >
         <h1 className="apptitle">لیست کارها</h1>
@@ -35,6 +47,15 @@ function App() {
             <button className="addbtn" type="submit">
               اضافه کردن
             </button>
+            <select
+              name="todos"
+              className="filter-todo"
+              onClick={statusehandler}
+            >
+              <option value="all">All</option>
+              <option value="completed">Completed</option>
+              <option value="uncompleted">Uncompleted</option>
+            </select>
           </form>
           <Todos />
         </div>
