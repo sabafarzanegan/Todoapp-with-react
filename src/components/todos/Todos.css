@@ -25,6 +25,7 @@ li{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 17px;
 }
 li span{
     display: flex;

@@ -19,10 +19,11 @@ form input{
     padding: 10px;
     width: 70%;
     border-radius: 4px;
+    font-size: 18px;
 }
 .addbtn{
     all: unset;
-    padding: 9px;
+    padding: 11px;
     width: 100px;
     background-color: #096279;
     text-align: center;
